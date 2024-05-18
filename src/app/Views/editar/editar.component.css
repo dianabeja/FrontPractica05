@@ -1,0 +1,61 @@
+/* add-employee.component.css */
+.add-employee-container {
+    width: 300px;
+    margin: 40px 20vw;
+    padding: 20px;
+    border-radius: 15px;
+    color: #fff; /* Blanco */
+    position: relative;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #DFF250; /* Verde */
+}
+
+input[type="text"] {
+    width: 26vw;
+    padding: 10px;
+    border: 1px solid #ffffff; /* Verde */
+    border-radius: 7px;
+    color: #000000; /* Blanco */
+    background-color: #f1f1f1; /* Azul fuerte oscuro */
+    outline: none;
+}
+
+button {
+    display: block;
+    width: 27.5vw;
+    padding: 10px;
+    background-color: #99A638; /* Verde más claro */
+    color: #fff; /* Blanco */
+    border: none;
+    font-weight: bold;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 30px
+}
+
+button:hover {
+    background-color: #535920; /* Verde más oscuro */
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

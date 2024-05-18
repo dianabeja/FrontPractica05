@@ -1,0 +1,9 @@
+.contenedor{
+    position: fixed;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #0D0D0D;
+}

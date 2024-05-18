@@ -1,0 +1,64 @@
+/* dashboard.component.css */
+.dashboard-container {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #DFF250;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-150px); 
+    top: 0;
+    left: 0;
+    font-size: large;
+    font-weight: bold;
+}
+
+.sidebar.active {
+    transform: translateX(0); /* Mostrar cuando activo */
+    top: 0;
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 20px;
+}
+
+.sidebar ul li a {
+    color: #0D0D0D; /* Blanco */
+    text-decoration: none;
+}
+
+.content {
+    color: #DFF250;
+    padding: 20px;
+}
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.employee-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.employee-list ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
