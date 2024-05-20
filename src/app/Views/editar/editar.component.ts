@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { LoginService } from '../../Services/login.service';
 
 @Component({
   selector: 'app-editar',
@@ -9,24 +10,23 @@ import { Router } from '@angular/router';
 })
 export class EditarComponent {
   newEmployee: any = {
-    name: '',
-    id: '',
-    address: '',
+    clave: 0,
+    nombre: '',
+    direccion: '',
     phone: ''
   };
 
 
-  constructor(private router: Router) {}
+  constructor(private service: LoginService) {}
 
   addEmployee(form: NgForm) {
     if (form.valid) {
-
       const isAuthenticated = true;
-
       if (isAuthenticated) {
-        this.router.navigate(['/inicio']);
+        this.service.updateempleado(this.newEmployee.clave, this.newEmployee).toPromise();
+
       } else {
-        console.log('Error de autenticación');
+        console.log('Error');
       }
     }
   }

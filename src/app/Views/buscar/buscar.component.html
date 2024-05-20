@@ -1,16 +1,14 @@
 <div class="dashboard-container">
   <div class="content">
     <h2>Buscar Empleado</h2>
-    <div class="search-bar">
-      <input type="text" placeholder="Buscar empleado..." />
-      <button type="submit">Buscar</button>
-
-    </div>
+    <form class="search-bar" (ngsubmit)="buscarEmpleado(addForm, id)" #addForm="ngForm">
+      <input type="number" id="id" name="id" [(ngModel)]="id" required>
+      <button (click)="buscarEmpleado(addForm, id)" type="submit" [disabled]="!addForm.valid">Buscar</button>
+    </form>
     <div class="employee-list">
       <ul>
-        <li>Empleado 1</li>
-        <li>Empleado 2</li>
-        <li>Empleado 3</li>
+        <li>Empleado</li>
+        <li>{{empleados.clave}} - {{empleados.nombre}} - {{empleados.direccion}} - {{empleados.telefono}}</li>
       </ul>
     </div>
   </div>

@@ -11,6 +11,7 @@ import { AgregarComponent } from './Views/agregar/agregar.component';
 import { EditarComponent } from './Views/editar/editar.component';
 import { BuscarComponent } from './Views/buscar/buscar.component';
 import { EmpleadosComponent } from './Views/empleados/empleados.component';
+import { EliminarComponent } from './Views/eliminar/eliminar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EmpleadosComponent } from './Views/empleados/empleados.component';
     AgregarComponent,
     EditarComponent,
     BuscarComponent,
-    EmpleadosComponent
+    EmpleadosComponent,
+    EliminarComponent
   ],
   imports: [
     BrowserModule,

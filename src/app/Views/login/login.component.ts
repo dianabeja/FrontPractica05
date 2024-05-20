@@ -1,40 +1,33 @@
-// login.component.ts
-import { Component , OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginService } from '../../Services/login.service';
+import { LoginService } from 'src/app/Services/login.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent implements OnInit {
   username: string = 'alex';
   password: string = 'alex';
 
   constructor(private router: Router, private loginService: LoginService) {}
-  ngOnInit(): void {
-    this.loginService.login(this.username, this.password).subscribe(
-      (data) => {
-        console.log(data);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
-  }
+
+  ngOnInit(): void {}
 
   login(form: NgForm) {
     if (form.valid) {
-
-      const isAuthenticated = true;
-
-      if (isAuthenticated) {
-        this.router.navigate(['/empleados']);
-      } else {
-        console.log('Error de autenticación');
-      }
+      this.loginService.login(this.username, this.password).subscribe(
+        (response) => {
+          console.log('Login successful:', response);
+          location.reload(); 
+          this.router.navigate(['/logout']);
+        },
+        (error) => {
+          console.log('Error de autenticación:', error);
+        }
+      );
     }
   }
 }

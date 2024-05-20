@@ -23,7 +23,7 @@ label {
     color: #DFF250; /* Verde */
 }
 
-input[type="text"] {
+input[type="text"], input[type="number"] {
     width: 26vw;
     padding: 10px;
     border: 1px solid #ffffff; /* Verde */
@@ -55,7 +55,3 @@ button:disabled {
     cursor: not-allowed;
 }
 
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-}
